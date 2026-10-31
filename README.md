@@ -6,7 +6,7 @@
 Privacy-first personalized recommendations for Jellyfin based entirely on local watch history and metadata similarity. No cloud services, no tracking. Works on all Jellyfin clients (even TVs).
 
 > [!IMPORTANT]
-> This project will not be updated for Jellyfin 12. If someone would like to maintain a Jellyfin 12-compatible fork, I would be happy to link to it here—please open an issue or discussion.
+> **This is a Jellyfin 12 fork** of [rdpharr/jellyfin-plugin-localrecs](https://github.com/rdpharr/jellyfin-plugin-localrecs). It targets Jellyfin 12.4 (.NET 10). For Jellyfin 10.11, use the original project.
 
 Please report any issues or feedback on [GitHub Issues](https://github.com/rdpharr/jellyfin-plugin-localrecs/issues).
 
