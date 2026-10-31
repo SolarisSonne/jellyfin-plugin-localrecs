@@ -8,6 +8,14 @@
         "category": "General",
         "versions": [
             {
+                "version": "0.7.1.0",
+                "changelog": "Faster server startup\n- The startup play-status sync now runs in the background instead of blocking Jellyfin's 'Initializing server' phase (took several seconds per user)\n- The sync stops early if the server shuts down",
+                "targetAbi": "12.4.0.0",
+                "sourceUrl": "https://github.com/SolarisSonne/jellyfin-plugin-localrecs/releases/download/v0.7.1/jellyfin-plugin-localrecs-v0.7.1.zip",
+                "checksum": "ce34a092ada1c15df4ee467530118970",
+                "timestamp": "2026-11-01T00:00:00Z"
+            },
+            {
                 "version": "0.7.0.0",
                 "changelog": "Jellyfin 12 support (fork of rdpharr/jellyfin-plugin-localrecs)\n- Targets Jellyfin 12.4 / .NET 10\n- No functional changes compared to 0.6.1\n- REQUIRES Jellyfin 12.4 or newer",
                 "targetAbi": "12.4.0.0",
