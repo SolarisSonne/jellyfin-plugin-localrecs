@@ -24,15 +24,15 @@ Please report any issues or feedback on [GitHub Issues](https://github.com/rdpha
 
 ## Requirements
 
-- **Jellyfin Server:** 10.11.9+
-- **.NET Runtime:** 9.0
-- **Target ABI:** 10.11.9.0
+- **Jellyfin Server:** 12.4+
+- **.NET Runtime:** 10.0
+- **Target ABI:** 12.4.0.0
 
 ## Installation
 
 1. **Add plugin repository:**  
    Dashboard → Plugins → Repositories → Add  
-   `https://raw.githubusercontent.com/rdpharr/jellyfin-plugin-localrecs/main/manifest.json`
+   `https://raw.githubusercontent.com/SolarisSonne/jellyfin-plugin-localrecs/main/manifest.json`
 
 2. **Install plugin:**  
    Dashboard → Plugins → Catalog → Install "Local Recommendations"

@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.7.0] - 2026-11-01
+
+### Changed
+
+- **Jellyfin 12 support**: this fork retargets the plugin from Jellyfin 10.11.9 / .NET 9 to **Jellyfin 12.4 / .NET 10**. No source changes were needed; all unit tests pass against the 12.4.0 API. No functional changes compared to 0.6.1.
+
+### Upgrade Notes
+
+- **Requires Jellyfin 12.4.0 or newer.** For Jellyfin 10.11, use the original project ([rdpharr/jellyfin-plugin-localrecs](https://github.com/rdpharr/jellyfin-plugin-localrecs)).
+
 ## [0.6.1] - 2026-05-30
 
 ### Fixed
