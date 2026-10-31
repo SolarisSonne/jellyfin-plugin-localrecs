@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.7.1] - 2026-11-01
+
+### Fixed
+
+- **Server startup blocked by play-status sync**: the startup sync from source libraries to recommendation libraries now runs in the background. Previously Jellyfin stayed on "Initializing server" until the sync had finished for every user (several seconds per user). The sync also stops early if the server shuts down.
+
 ## [0.7.0] - 2026-11-01
 
 ### Changed

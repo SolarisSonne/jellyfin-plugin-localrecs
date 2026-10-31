@@ -243,6 +243,12 @@ namespace Jellyfin.Plugin.LocalRecs.VirtualLibrary
 
             foreach (var user in _userManager.GetUsers())
             {
+                // Stop early if the server shuts down while the startup sync is still running
+                if (_disposed)
+                {
+                    return;
+                }
+
                 try
                 {
                     SyncPlayStatusFromSourceLibrary(user.Id);

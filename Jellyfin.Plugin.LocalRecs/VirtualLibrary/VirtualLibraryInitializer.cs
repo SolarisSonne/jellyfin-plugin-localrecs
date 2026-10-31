@@ -63,9 +63,23 @@ namespace Jellyfin.Plugin.LocalRecs.VirtualLibrary
                     _logger.LogInformation("Play status sync service is active and monitoring virtual library changes");
 
                     // Sync play status from source library to virtual library items
-                    // This ensures virtual library items reflect the real library's play status
-                    _logger.LogInformation("Syncing play status from source library to virtual library items...");
-                    _playStatusSyncService.SyncPlayStatusFromSourceLibraryForAllUsers();
+                    // This ensures virtual library items reflect the real library's play status.
+                    // Runs in the background: Jellyfin awaits StartAsync before finishing startup,
+                    // and a full sync takes several seconds per user.
+                    _logger.LogInformation("Syncing play status from source library to virtual library items in the background...");
+                    _ = Task.Run(
+                        () =>
+                        {
+                            try
+                            {
+                                _playStatusSyncService.SyncPlayStatusFromSourceLibraryForAllUsers();
+                            }
+                            catch (Exception ex)
+                            {
+                                _logger.LogError(ex, "Background play status sync failed");
+                            }
+                        },
+                        CancellationToken.None);
                 }
             }
             catch (OperationCanceledException)
